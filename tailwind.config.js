@@ -30,6 +30,7 @@ module.exports = {
         danger: '#EB001B',
         danger__opacity: 'rgba(235, 0, 27, 0.20)',
         blue: '#081028',
+        // border_color: '#343B4F',
         darkBlue: '#0B1739',
         grey__primary__light: '#98A4AE',
         grey__dark: '#19191A',
@@ -39,6 +40,7 @@ module.exports = {
         dropdown__bg: '#0F172A',
         dropdown__border: '#343B4F',
         dropdown__placeholder: '#BDBDBD',
+        bright_green: 'rgba(114, 229, 0, 1)',
       },
       spacing: {
         2.5: '0.625rem',

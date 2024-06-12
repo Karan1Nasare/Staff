@@ -70,6 +70,8 @@ export default function UpdateContentDialog(props) {
   return (
     <React.Fragment>
       <Dialog
+        fullWidth={true}
+        maxWidth={'sm'}
         open={open}
         TransitionComponent={Transition}
         keepMounted

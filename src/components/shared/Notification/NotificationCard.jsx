@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react/dist/iconify';
 import ConfirmDelete from '../../ui/Dialog/ConfirmDelete';
 import UpdateContentDialog from '../../Material/dialog/UpdateContentDialog';
 import ProfileImage from '../../../assets/images/profile-image.png';
+import EditNotificationDialog from '../../ui/Dialog/EditNotificationDialog';
 
 function Image({ src, alt }) {
   return (
@@ -91,6 +92,12 @@ function NotificationCard() {
         handleClose={handleCloseDelete}
         open={openEditCard}
       />
+      {/* <EditNotificationDialog
+        open={openEdit}
+        handleClose={handleCloseEdit}
+        data={{ image: ProfileImage }}
+        updateHandler={updateHandler}
+      /> */}
       <UpdateContentDialog
         open={openEdit}
         handleClose={handleCloseEdit}

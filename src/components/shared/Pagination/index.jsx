@@ -57,6 +57,7 @@ const Pagination = ({
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
         className='page-button bg-white text-black p-2 rounded-full mx-1'
+        style={{ padding: '10px 16px' }}
       >
         &lt;
       </button>
@@ -78,6 +79,7 @@ const Pagination = ({
         onClick={() => setCurrentPage(currentPage + 1)}
         disabled={currentPage === totalPages}
         className='page-button bg-white text-black p-2 rounded-full mx-1'
+        style={{ padding: '10px 16px' }}
       >
         &gt;
       </button>

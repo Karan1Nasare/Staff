@@ -39,10 +39,10 @@ const MaterialPage = () => {
       <div
         className='w-full'
         style={{
-          height: '100vh', // Ensure container takes full viewport height
+          height: '100%', // Ensure container takes full viewport height
           display: 'flex',
           flexDirection: 'column',
-          overflowY: 'hidden', // Disable container-level overflow
+          overflowY: 'hidden',
         }}
       >
         <div className='w-max mb-6'>

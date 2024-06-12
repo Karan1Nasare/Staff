@@ -14,13 +14,13 @@ const Cards = ({ cards }) => {
             className='bg-secondary__fill mt-2 h-44 border border-gray-700 p-7 mr-2 rounded-md'
           >
             <div className='flex text-white justify-between'>
-              <div className='flex mx-2'>
+              <div className='flex mx-2 gap-3'>
                 <img
                   className='h-14 w-14 rounded-full'
                   src={card.image}
                   alt=''
                 />
-                <div className='text-left pl-1 text-white mx-2'>
+                <div className='text-left pl-1 text-white mx-2 flex flex-col gap-[5px]'>
                   <h2 className='text-base'>{card.name}</h2>
                   <h3 className='text-xs'>{card.email}</h3>
                   <h3 className='text-xs'>{card.number}</h3>
@@ -29,17 +29,17 @@ const Cards = ({ cards }) => {
               <span className='mt-1 lg:mt-4 mr-2'>{card.icon}</span>
             </div>
             <div className='flex mt-4 justify-between'>
-              <div>
+              <div className='flex flex-col gap-1'>
                 <h3 className=' text-grey__primary__light text-xs'>Standard</h3>
-                <div className=' mt-1 lg:w-16 bg-tealGreen bg-opacity-20 w-12 rounded-full'>
+                <div className=' mt-1 lg:w-16 bg-tealGreen bg-opacity-20 w-12 rounded-full p-[2px]'>
                   <h3 className='text-tealGreen text-sm'>{card.standard}</h3>
                 </div>
               </div>
-              <div className=''>
+              <div className='flex flex-col gap-1'>
                 <h3 className='text-grey__primary__light text-xs'>
                   Enrollment
                 </h3>
-                <div className=' mt-1 bg-success bg-opacity-20 w-20 pl-2 rounded-full'>
+                <div className=' mt-1 bg-success bg-opacity-20 w-20 pl-2 rounded-full p-[2px]'>
                   <h3 className='text-success mr-2 text-sm '>
                     {card.enrollment}
                   </h3>

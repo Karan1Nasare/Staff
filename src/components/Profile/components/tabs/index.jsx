@@ -6,7 +6,8 @@ import { Tab, Tabs } from '@mui/material';
 import { Icon } from '@iconify/react';
 
 import ProfileDetails from './profileDetails';
-import AttendanceReport from './AttendanceReport';
+import OrgAccountInfo from './orgAccountInfo';
+import PlanFeatures from './planFeatures';
 
 const ProfileTab = () => {
   const [Tabvalue, setTabValue] = useState('1');
@@ -37,7 +38,6 @@ const ProfileTab = () => {
   const ProfilerTabs = activeTab => {
     const TabsList = {
       1: <ProfileDetails setValue={setValue} />,
-      2: <AttendanceReport setValue={setValue} />,
     };
 
     return TabsList[activeTab];
@@ -64,7 +64,7 @@ const ProfileTab = () => {
           iconPosition='start'
           label='Growth Reports'
           sx={{ gap: '15px' }}
-          value={'2'}
+          value={'3'}
         />
       </Tabs>
       <div>
