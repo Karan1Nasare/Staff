@@ -10,23 +10,21 @@ import shape from './shape';
 import components from './components';
 import colors from './colors';
 
-const theme = variant => {
-  return createTheme(
-    {
-      spacing: 4,
-      breakpoints,
-      overrides,
-      props,
-      typography,
-      shadows,
-      shape,
-      components,
-      palette: variant.palette,
-      color: colors,
-    },
-    variant.name,
-  );
-};
-const themes = variants.map(variant => theme(variant));
+const theme = (variant) => createTheme(
+  {
+    spacing: 4,
+    breakpoints,
+    overrides,
+    props,
+    typography,
+    shadows,
+    shape,
+    components,
+    palette: variant.palette,
+    color: colors,
+  },
+  variant.name,
+);
+const themes = variants.map((variant) => theme(variant));
 
 export default themes;

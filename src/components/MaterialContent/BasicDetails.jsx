@@ -151,18 +151,22 @@ function BasicDetails({
             </p>
             <FormControl fullWidth sx={{ m: 1 }}>
               <TextField
-                className='w-4/12'
+                className='w-full'
                 variant='outlined'
                 placeholder='Enter title'
                 value={title}
                 onChange={onChange}
                 fullWidth
-                InputProps={{
-                  sx: {
-                    height: '2.5rem !important',
-                    background: colors.secondary__fill__dark,
-                    border: 'none',
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    backgroundColor: 'transparent',
                     borderRadius: '0.375rem',
+                  },
+                  '& .MuiInputBase-input': {
+                    height: '1.5rem',
+                  },
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    borderColor: 'rgba(255, 255, 255, 0.23)', // Optional: adjust the border color if needed
                   },
                 }}
               />

@@ -35,11 +35,17 @@ const LayoutWrapper = lazy(() => import('./components/LayoutWrapper'));
 const Dashboard = lazy(() => import('./components/dashboard'));
 
 const QuestionBank = lazy(() => import('./components/questionBank'));
-const AddQuestions = lazy(
-  () => import('./components/questionBank/addQuestionTab'),
+const Exam = lazy(() => import('./components/Exam'));
+const ExamQuestionBank = lazy(
+  () => import('./components/Exam/questionBank/index'),
+);
+const CreateExamPaper = lazy(
+  () => import('./components/Exam/createExamPaper/index'),
+);
+const AddExamBasicDetails = lazy(
+  () => import('./components/Exam/addExamBasicDetails/index'),
 );
 const Review = lazy(() => import('./components/questionBank/review'));
-
 const FeaturePage = lazy(() => import('./pages/FeaturePage'));
 const AddFeature = lazy(() => import('./pages/AddFeaturePage'));
 
@@ -244,10 +250,43 @@ const AppRoutes = [
     wrapper: LayoutWrapper,
   },
   {
-    name: 'addQuestions',
-    slug: 'addQuestions',
-    route: `/addQuestions`,
-    component: AddQuestions,
+    name: 'exam',
+    slug: 'exam',
+    route: `/exam`,
+    component: Exam,
+    menu_location: '',
+    icon: '',
+    external: false,
+    auth: true,
+    wrapper: LayoutWrapper,
+  },
+  {
+    name: 'examQuestionBank',
+    slug: 'examQuestionBank',
+    route: `/examQuestionBank`,
+    component: ExamQuestionBank,
+    menu_location: '',
+    icon: '',
+    external: false,
+    auth: true,
+    wrapper: LayoutWrapper,
+  },
+  {
+    name: 'createExamPaper',
+    slug: 'createExamPaper',
+    route: `/createExamPaper`,
+    component: CreateExamPaper,
+    menu_location: '',
+    icon: '',
+    external: false,
+    auth: true,
+    wrapper: LayoutWrapper,
+  },
+  {
+    name: 'addExamBasicDetails',
+    slug: 'addExamBasicDetails',
+    route: `/addExamBasicDetails`,
+    component: AddExamBasicDetails,
     menu_location: '',
     icon: '',
     external: false,

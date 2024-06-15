@@ -7,7 +7,7 @@ import { ContextStoreProvider } from './store/context-store'; // eslint-disable-
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <ContextStoreProvider>
         <ThemeProvider theme={themeList[0]}>
           <Suspense fallback={<div>Loading...</div>}>

@@ -15,7 +15,7 @@ const AddQuestions = () => {
   };
   return (
     <div className='w-44.1 h-39.3 '>
-      <div className='w-44.1 h-[100%] rounded-md border border-gray-700 bg-secondary__fill flex flex-col'>
+      <div className='h-[100%] rounded-md border border-gray-700 bg-secondary__fill flex flex-col'>
         <div className='flex mt-6'>
           <span className='ml-8 mr-3 mt-1'>
             <GrLinkPrevious />

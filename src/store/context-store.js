@@ -26,8 +26,8 @@ export const DefaultState = localStorage.getItem('last_state')
 export const StoreContext = createContext(DefaultState);
 export const StoreDispatchContext = createContext();
 
-export const ContextStoreProvider = ({ children }) => {
-  const StateReducer = (State, action) => {
+export function ContextStoreProvider({ children }) {
+  function StateReducer(State, action) {
     console.log(action.type, action);
 
     switch (action.type) {
@@ -81,7 +81,7 @@ export const ContextStoreProvider = ({ children }) => {
       }
     }
     return null;
-  };
+  }
 
   const [State, StateDispatch] = useReducer(StateReducer, DefaultState);
 
@@ -94,7 +94,7 @@ export const ContextStoreProvider = ({ children }) => {
       <StoreContext.Provider value={Store}>{children}</StoreContext.Provider>
     </StoreDispatchContext.Provider>
   );
-};
+}
 
 export function useStore() {
   return useContext(StoreContext);

@@ -67,9 +67,7 @@ const useFeatures = () => {
       return;
     }
 
-    const filteredItems = featureData.filter(notification =>
-      notification.title.toLowerCase().includes(searchTerm.toLowerCase()),
-    );
+    const filteredItems = featureData.filter((notification) => notification.title.toLowerCase().includes(searchTerm.toLowerCase()));
     console.log('🚀 ~ useEffect ~ filteredItems:', filteredItems);
 
     setFilteredData(filteredItems);
@@ -85,7 +83,7 @@ const useFeatures = () => {
   // Calculate total pages based on original data
   const totalPages = Math.ceil(featureData.length / ITEMS_PER_PAGE);
 
-  const handleSearchChange = event => {
+  const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
   console.log('current page:', currentPage);

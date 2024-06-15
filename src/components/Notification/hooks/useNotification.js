@@ -39,9 +39,7 @@ const useNotification = () => {
       return;
     }
 
-    const filteredItems = notificationData.filter(notification =>
-      notification.title.toLowerCase().includes(searchTerm.toLowerCase()),
-    );
+    const filteredItems = notificationData.filter((notification) => notification.title.toLowerCase().includes(searchTerm.toLowerCase()));
 
     setFilteredData(filteredItems);
     setCurrentPage(1); // Reset page number when performing a search
@@ -54,7 +52,7 @@ const useNotification = () => {
     ? filteredData.slice(firstCardIndex, lastCardIndex)
     : notificationData.slice(firstCardIndex, lastCardIndex);
 
-  const handleSearchChange = event => {
+  const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 

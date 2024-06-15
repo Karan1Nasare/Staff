@@ -294,7 +294,7 @@ const components = {
         alignItems: 'center',
         margin: 0,
         padding: 0,
-        borderBottom: `1px solid #6B7A99`,
+        borderBottom: '1px solid #6B7A99',
       },
     },
   },
@@ -335,7 +335,7 @@ const components = {
         '& input': {
           color: '#fff', // Text color
           background: colors.secondary__fill,
-          border: `1px solid #343B4F`,
+          border: '1px solid #343B4F',
           borderRadius: '4px',
           padding: '10px 16px',
           fontSize: '14px',

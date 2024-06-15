@@ -15,7 +15,7 @@ const useAddNotification = () => {
     setIsEditOpen(false);
   };
 
-  const toggleChecked = index => {
+  const toggleChecked = (index) => {
     const updatedAdminData = [...adminData];
 
     updatedAdminData[index] = {
@@ -27,14 +27,14 @@ const useAddNotification = () => {
   };
 
   const selectAllAdmin = () => {
-    const updatedAdminData = adminData.map(item => ({
+    const updatedAdminData = adminData.map((item) => ({
       ...item,
       isChecked: true,
     }));
     setAdminData(updatedAdminData);
   };
 
-  const hasCheckedAdmins = adminData.some(item => item.isChecked);
+  const hasCheckedAdmins = adminData.some((item) => item.isChecked);
 
   const handleSearchClick = () => {
     console.log('handleSearchClick');
@@ -44,17 +44,16 @@ const useAddNotification = () => {
     }
 
     const filtered = adminData.filter(
-      card =>
-        card.name.toLowerCase().includes(searchInputValue.toLowerCase()) ||
-        card.enrollment
+      (card) => card.name.toLowerCase().includes(searchInputValue.toLowerCase())
+        || card.enrollment
           .toLowerCase()
-          .includes(searchInputValue.toLowerCase()) ||
-        card.standard.toLowerCase().includes(searchInputValue.toLowerCase()),
+          .includes(searchInputValue.toLowerCase())
+        || card.standard.toLowerCase().includes(searchInputValue.toLowerCase()),
     );
     setFilteredData(filtered);
   };
 
-  const handleSearchInputChange = e => {
+  const handleSearchInputChange = (e) => {
     setSearchInputValue(e.target.value);
     if (e.target.value.trim() === '') {
       setFilteredData([]);

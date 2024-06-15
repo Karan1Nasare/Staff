@@ -93,7 +93,6 @@ const McqType = () => {
                   onClick={handleInputClick}
                   placeholder='Enter answer text'
                 />
-                {textEditor ? <RichTextEditor /> : null}
               </div>
             ))}
           </div>

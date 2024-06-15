@@ -27,7 +27,7 @@ const Header = ({ inputValue, handleInputChange, handleSearchClick }) => {
                 key={7}
                 onChange={handleInputChange}
                 value={inputValue}
-                className='p-2 h-10 rounded-sm text-white w-80 opacity-45 bg-secondary__fill__dark'
+                className='p-2 h-10 rounded-sm text-white w-80 bg-secondary__fill__dark'
                 type='text'
                 placeholder=' Search Name, Innrollment, Standard'
               />

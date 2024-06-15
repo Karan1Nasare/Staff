@@ -30,8 +30,8 @@ const SuperAdminSideBar = () => {
     {
       label: 'Exam',
       icon: 'flowbite:user-settings-solid',
-      name: 'questionBank',
-      isActive: location.pathname === getRouteByName('questionBank')?.route,
+      name: 'exam',
+      isActive: location.pathname === getRouteByName('exam')?.route,
     },
     {
       label: 'Material',

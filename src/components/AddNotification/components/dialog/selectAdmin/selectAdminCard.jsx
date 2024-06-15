@@ -41,7 +41,9 @@ const SelectAdminCard = () => {
                   {card.standardName}
                 </h3>
                 <div className=' mt-1 bg-tealGreen bg-opacity-20 w-12 rounded-full'>
-                  <h3 className=' text-tealGreen text-sm'>{card.standard}</h3>
+                  <h3 className=' text-tealGreen text-sm text-center'>
+                    {card.standard}
+                  </h3>
                 </div>
               </div>
               <div className=''>

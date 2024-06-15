@@ -12,12 +12,19 @@ const Accordion = ({ chapter, subtopics, locked }) => {
     setIsOpen(!isOpen);
   };
 
+  let lockText;
+  if (isOpen) {
+    lockText = 'Unlocked';
+  } else {
+    lockText = 'Lock';
+  }
+
+  const backgroundColor = isOpen ? 'bg-unlocked' : 'bg-locked';
+
   return (
-    <div className='mb-4  shadow-lg'>
+    <div className='mb-4 shadow-lg'>
       <div
-        className={`flex justify-between items-center p-4 cursor-pointer ${
-          locked ? 'bg-locked' : 'bg-unlocked'
-        } text-white `}
+        className={`flex justify-between items-center p-4 cursor-pointer text-white ${backgroundColor}`}
         onClick={toggleAccordion}
       >
         <div className='flex items-center space-x-3'>
@@ -45,9 +52,7 @@ const Accordion = ({ chapter, subtopics, locked }) => {
             ) : (
               <FiUnlock className='text-white text-sm cursor-pointer' />
             )}
-            <span className='text-white text-sm'>
-              {locked ? 'Locked' : 'Unlocked'}
-            </span>
+            <span className='text-white text-sm'>{lockText}</span>
           </div>
 
           <FaRegEdit className='text-white' />
@@ -59,17 +64,17 @@ const Accordion = ({ chapter, subtopics, locked }) => {
         </div>
       </div>
       {isOpen && (
-        <div className=' p-4 rounded-b-lg'>
+        <div className='p-4 rounded-b-lg'>
           {subtopics.map((subtopic, index) => (
             <div
               key={index}
-              className='flex items-center justify-between bg-[#0A1330] border border-[#343B4F] rounded-md p-1 pr-2  mb-2'
+              className='flex items-center justify-between bg-[#0A1330] border border-[#343B4F] rounded-md p-1 pr-2 mb-2'
             >
               <input
                 type='text'
                 name='price'
                 id='price'
-                className='focus:outline-none text-white block w-full rounded-md border-0 bg-transparent shadow-none py-1.5 pl-7 pr-2  placeholder:text-gray-400 sm:text-sm sm:leading-6'
+                className='focus:outline-none text-white block w-full rounded-md border-0 bg-transparent shadow-none py-1.5 pl-7 pr-2 placeholder:text-gray-400 sm:text-sm sm:leading-6'
                 placeholder='0.00'
                 defaultValue={subtopic}
               />

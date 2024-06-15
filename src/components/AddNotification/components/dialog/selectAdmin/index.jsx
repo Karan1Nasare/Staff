@@ -52,7 +52,9 @@ const SelectAdminDialog = ({
                 >
                   <button>Select All</button>
                 </div>
-                <h1 className='text-white mr-10 mt-1 text-sm'>4 Selected</h1>
+                <h1 className='text-white mr-6 mt-1 text-sm md:text-center'>
+                  4 Selected
+                </h1>
                 <div
                   onClick={onClose}
                   className='flex p-1 text-sm bg-white pl-3 h-8 w-16 rounded-md'

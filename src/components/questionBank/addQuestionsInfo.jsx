@@ -68,8 +68,8 @@ const AddQuestionsInfo = () => {
             className='h-11 border text-sm bg-secondary__fill border-gray-600 rounded-md w-full max-w-screen mx-auto'
             type='text'
             placeholder='  Enter Exam Title'
-            value={questionBankData.title}
-            onChange={handleChange}
+            // value={questionBankData.title}
+            // onChange={handleChange}
           />
         </div>
         <h3 className='mt-6 mb-2 text-left'>Description</h3>
